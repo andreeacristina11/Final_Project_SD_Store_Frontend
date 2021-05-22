@@ -1,0 +1,19 @@
+.product-card{
+  max-width: 200px;
+  min-height: 520px;
+  float: left;
+  max-height: 520px;
+  margin: 10px;
+
+
+
+}
+
+.description-paragraph{
+  min-height: 140px;
+}
+
+
+.product-list{
+  overflow: auto;
+}
