@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+<div class="product-list">
+<mat-card class="product-card" *ngFor="let product of products">
+  <mat-card-header>
+    <mat-card-title>{{product.name}}</mat-card-title>
+    <mat-card-subtitle> {{product.productType}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://media.telekom.ro/images/lp/tv-net-voce/tv_banner.png"/>
+  <mat-card-content>
+    <p class="description-paragraph">
+      {{product.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <p style="color: red">{{product.price}} RON</p>
+    <button mat-button (click)="addProductToCart(product.id)">Add to cart</button>
+  </mat-card-actions>
+</mat-card>
+</div>
+
+<div>
+<mat-paginator [pageSizeOptions]="[5, 10]" [length]="totalNumberOfElements" (page)="changePage($event)"></mat-paginator>
+</div>
